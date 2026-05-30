@@ -1,4 +1,4 @@
-# README.md — Complete RISC-V Computer in Logisim Evolution
+# Complete RISC-V Computer in Logisim Evolution
 
 
 # Complete RISC-V Computer in Logisim Evolution
