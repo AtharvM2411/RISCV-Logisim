@@ -1,5 +1,3 @@
-# Complete RISC-V Computer in Logisim Evolution
-
 
 # Complete RISC-V Computer in Logisim Evolution
 
@@ -10,7 +8,7 @@
 ## Overview
 
 This project aims to design and implement a fully functional **32-bit RISC-V computer** inside 
-:contentReference[oaicite:0]{index=0} using only digital hardware primitives.
+Logisim Evolution using only digital hardware primitives.
 
 The goal is not just to build a CPU, but to engineer an entire computer system including:
 
