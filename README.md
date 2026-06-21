@@ -2,9 +2,10 @@
 # Complete RISC-V Computer in Logisim Evolution
 
 > Building a complete pipelined computer system from scratch using digital logic.
-
+ 
 ---
-
+#### NOTE: It is a Long term prject aimed towards gaining deep understanding of computer systems. Hence the future features may take years before they are realised.
+---
 ## Overview
 
 This project aims to design and implement a fully functional **32-bit RISC-V computer** inside 

@@ -2,7 +2,7 @@
 
 **Document Version:** 1.0
 
-**Last Updated:** 2026-06-15 21:48 UTC
+**Last Updated:** 2026-06-15 21:48 IST
 
 **Implementation Status:** Implemented and Verified
 
@@ -41,6 +41,11 @@ The Instruction Fetch stage performs the following functions:
 # 3. Pipeline Context
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+---
 flowchart LR
     IF["Instruction Fetch"]
     ID["Instruction Decode"]
@@ -54,6 +59,11 @@ flowchart LR
 Control-flow feedback:
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+---
 flowchart LR
     EX["Execute Stage"]
     PCC["PC Control Unit"]
@@ -95,6 +105,11 @@ flowchart LR
 # 5. Internal Architecture
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+---
 flowchart LR
 
     MUX["PC Selector MUX"]

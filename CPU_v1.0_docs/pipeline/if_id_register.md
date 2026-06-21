@@ -2,7 +2,7 @@
 
 **Document Version:** 1.0
 
-**Last Updated:** 2026-06-15 22:37 UTC
+**Last Updated:** 2026-06-21 16:35 IST
 
 **Implementation Status:** Implemented
 
@@ -40,6 +40,11 @@ The IF/ID Pipeline Register performs the following functions:
 # 3. Pipeline Context
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+---
 flowchart LR
     IF["Instruction Fetch"]
     IFID["IF/ID Register"]
@@ -51,6 +56,11 @@ flowchart LR
 Pipeline control interfaces:
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+---
 flowchart TB
     STALL["stall"]
     FLUSH["flush"]
@@ -106,6 +116,11 @@ flowchart LR
 Control signal organization:
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+---
 flowchart TB
 
     CLK["CLK"]
