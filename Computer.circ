@@ -5221,17 +5221,17 @@
       <a name="label" val="ALU_Result"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(1430,330)" name="Tunnel">
+    <comp lib="0" loc="(1240,210)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="ALU_Result"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(1450,290)" name="Tunnel">
+    <comp lib="0" loc="(1260,170)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="pc_target_address"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(1460,290)" name="Pin">
+    <comp lib="0" loc="(1270,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="pc_target_address"/>
@@ -5239,7 +5239,7 @@
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(1460,330)" name="Pin">
+    <comp lib="0" loc="(1270,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="ALU_Result"/>
@@ -5247,11 +5247,11 @@
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(1480,370)" name="Tunnel">
+    <comp lib="0" loc="(1290,250)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="branch_taken"/>
     </comp>
-    <comp lib="0" loc="(1510,370)" name="Pin">
+    <comp lib="0" loc="(1320,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="branch_taken"/>
@@ -5458,9 +5458,9 @@
     <wire from="(1170,450)" to="(1180,450)"/>
     <wire from="(1200,420)" to="(1200,430)"/>
     <wire from="(1200,420)" to="(1210,420)"/>
-    <wire from="(1430,330)" to="(1460,330)"/>
-    <wire from="(1450,290)" to="(1460,290)"/>
-    <wire from="(1480,370)" to="(1510,370)"/>
+    <wire from="(1240,210)" to="(1270,210)"/>
+    <wire from="(1260,170)" to="(1270,170)"/>
+    <wire from="(1290,250)" to="(1320,250)"/>
     <wire from="(160,690)" to="(170,690)"/>
     <wire from="(170,680)" to="(170,690)"/>
     <wire from="(170,680)" to="(290,680)"/>
@@ -5507,6 +5507,134 @@
     <wire from="(930,490)" to="(950,490)"/>
     <wire from="(940,600)" to="(950,600)"/>
     <wire from="(950,510)" to="(950,600)"/>
+  </circuit>
+  <circuit name="pc_target_address_generator">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="pc_target_address_generator"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(240,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="immediate"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(240,130)" name="Tunnel">
+      <a name="label" val="immediate"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(240,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="I_TYPE_JALR"/>
+    </comp>
+    <comp lib="0" loc="(240,170)" name="Tunnel">
+      <a name="label" val="I_TYPE_JALR"/>
+    </comp>
+    <comp lib="0" loc="(240,50)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="PC"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(240,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="rs1_data"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(240,90)" name="Tunnel">
+      <a name="label" val="rs1_data"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(250,50)" name="Tunnel">
+      <a name="label" val="PC"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(420,500)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="PC"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(420,530)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rs1_data"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(470,370)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="immediate"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(510,350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="PC"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(570,520)" name="Tunnel">
+      <a name="label" val="jalr_target"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(640,360)" name="Tunnel">
+      <a name="label" val="pc_relative_target"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(640,400)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="pc_relative_target"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(640,460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="jalr_target"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(700,530)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="I_TYPE_JALR"/>
+    </comp>
+    <comp lib="0" loc="(760,430)" name="Tunnel">
+      <a name="label" val="pc_target_address"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(920,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="pc_target_address"/>
+      <a name="radix" val="16"/>
+      <a name="type" val="output"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(920,90)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="pc_target_address"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(720,430)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(490,520)" name="Adder">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(560,360)" name="Adder">
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(240,50)" to="(250,50)"/>
+    <wire from="(420,500)" to="(430,500)"/>
+    <wire from="(420,530)" to="(450,530)"/>
+    <wire from="(430,500)" to="(430,510)"/>
+    <wire from="(430,510)" to="(450,510)"/>
+    <wire from="(470,370)" to="(520,370)"/>
+    <wire from="(490,520)" to="(570,520)"/>
+    <wire from="(510,350)" to="(520,350)"/>
+    <wire from="(560,360)" to="(640,360)"/>
+    <wire from="(640,400)" to="(650,400)"/>
+    <wire from="(640,460)" to="(650,460)"/>
+    <wire from="(650,400)" to="(650,420)"/>
+    <wire from="(650,420)" to="(690,420)"/>
+    <wire from="(650,440)" to="(650,460)"/>
+    <wire from="(650,440)" to="(690,440)"/>
+    <wire from="(700,450)" to="(700,530)"/>
+    <wire from="(720,430)" to="(760,430)"/>
   </circuit>
   <circuit name="pc_control_unit">
     <a name="appearance" val="logisim_evolution"/>
@@ -6782,134 +6910,6 @@
     <wire from="(340,390)" to="(360,390)"/>
     <wire from="(550,100)" to="(560,100)"/>
     <wire from="(550,140)" to="(560,140)"/>
-  </circuit>
-  <circuit name="pc_target_address_generator">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="pc_target_address_generator"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(240,130)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="immediate"/>
-      <a name="radix" val="16"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(240,130)" name="Tunnel">
-      <a name="label" val="immediate"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(240,170)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="I_TYPE_JALR"/>
-    </comp>
-    <comp lib="0" loc="(240,170)" name="Tunnel">
-      <a name="label" val="I_TYPE_JALR"/>
-    </comp>
-    <comp lib="0" loc="(240,50)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="PC"/>
-      <a name="radix" val="16"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(240,90)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="rs1_data"/>
-      <a name="radix" val="16"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(240,90)" name="Tunnel">
-      <a name="label" val="rs1_data"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(250,50)" name="Tunnel">
-      <a name="label" val="PC"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(420,500)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="PC"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(420,530)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="rs1_data"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(470,370)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="immediate"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(510,350)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="PC"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(570,520)" name="Tunnel">
-      <a name="label" val="jalr_target"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(640,360)" name="Tunnel">
-      <a name="label" val="pc_relative_target"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(640,400)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="pc_relative_target"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(640,460)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="jalr_target"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(700,530)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="I_TYPE_JALR"/>
-    </comp>
-    <comp lib="0" loc="(760,430)" name="Tunnel">
-      <a name="label" val="pc_target_address"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(920,90)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="pc_target_address"/>
-      <a name="radix" val="16"/>
-      <a name="type" val="output"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(920,90)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="pc_target_address"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="2" loc="(720,430)" name="Multiplexer">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(490,520)" name="Adder">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(560,360)" name="Adder">
-      <a name="width" val="32"/>
-    </comp>
-    <wire from="(240,50)" to="(250,50)"/>
-    <wire from="(420,500)" to="(430,500)"/>
-    <wire from="(420,530)" to="(450,530)"/>
-    <wire from="(430,500)" to="(430,510)"/>
-    <wire from="(430,510)" to="(450,510)"/>
-    <wire from="(470,370)" to="(520,370)"/>
-    <wire from="(490,520)" to="(570,520)"/>
-    <wire from="(510,350)" to="(520,350)"/>
-    <wire from="(560,360)" to="(640,360)"/>
-    <wire from="(640,400)" to="(650,400)"/>
-    <wire from="(640,460)" to="(650,460)"/>
-    <wire from="(650,400)" to="(650,420)"/>
-    <wire from="(650,420)" to="(690,420)"/>
-    <wire from="(650,440)" to="(650,460)"/>
-    <wire from="(650,440)" to="(690,440)"/>
-    <wire from="(700,450)" to="(700,530)"/>
-    <wire from="(720,430)" to="(760,430)"/>
   </circuit>
   <circuit name="branch_comparator">
     <a name="appearance" val="logisim_evolution"/>
