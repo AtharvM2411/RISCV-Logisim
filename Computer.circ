@@ -182,6 +182,9 @@
       <a name="facing" val="south"/>
       <a name="label" val="stall"/>
     </comp>
+    <comp lib="0" loc="(4380,190)" name="NoConnect">
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(450,190)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="flush"/>
@@ -210,6 +213,9 @@
     </comp>
     <comp lib="9" loc="(1395,930)" name="Text">
       <a name="text" val="Valid"/>
+    </comp>
+    <comp lib="9" loc="(4273,183)" name="Text">
+      <a name="text" val="For later use pc_target_addr"/>
     </comp>
     <comp loc="(1210,250)" name="instruction_decode"/>
     <comp loc="(1860,790)" name="register_file_subsystem"/>
@@ -408,7 +414,7 @@
     <wire from="(2980,200)" to="(2980,210)"/>
     <wire from="(2980,210)" to="(3140,210)"/>
     <wire from="(2980,220)" to="(2980,230)"/>
-    <wire from="(2980,230)" to="(3140,230)"/>
+    <wire from="(2980,230)" to="(3110,230)"/>
     <wire from="(2980,240)" to="(2980,250)"/>
     <wire from="(2980,250)" to="(3140,250)"/>
     <wire from="(2980,260)" to="(2980,270)"/>
@@ -430,8 +436,11 @@
     <wire from="(3090,410)" to="(3140,410)"/>
     <wire from="(3110,120)" to="(3110,130)"/>
     <wire from="(3110,130)" to="(3140,130)"/>
+    <wire from="(3110,230)" to="(3110,430)"/>
+    <wire from="(3110,230)" to="(3140,230)"/>
     <wire from="(3110,430)" to="(3110,460)"/>
     <wire from="(3110,430)" to="(3140,430)"/>
+    <wire from="(3110,460)" to="(3110,1120)"/>
     <wire from="(3360,130)" to="(3650,130)"/>
     <wire from="(3360,150)" to="(3640,150)"/>
     <wire from="(3360,170)" to="(3440,170)"/>
@@ -488,7 +497,7 @@
     <wire from="(400,190)" to="(400,310)"/>
     <wire from="(400,310)" to="(550,310)"/>
     <wire from="(4080,170)" to="(4120,170)"/>
-    <wire from="(4080,190)" to="(4540,190)"/>
+    <wire from="(4080,190)" to="(4380,190)"/>
     <wire from="(4080,210)" to="(4260,210)"/>
     <wire from="(4080,230)" to="(4140,230)"/>
     <wire from="(4080,250)" to="(4170,250)"/>
@@ -509,10 +518,9 @@
     <wire from="(4490,210)" to="(4490,1020)"/>
     <wire from="(450,190)" to="(450,290)"/>
     <wire from="(450,290)" to="(550,290)"/>
-    <wire from="(4540,190)" to="(4540,1120)"/>
     <wire from="(490,350)" to="(490,380)"/>
     <wire from="(490,380)" to="(550,380)"/>
-    <wire from="(50,1120)" to="(4540,1120)"/>
+    <wire from="(50,1120)" to="(3110,1120)"/>
     <wire from="(50,400)" to="(50,1120)"/>
     <wire from="(50,400)" to="(70,400)"/>
     <wire from="(500,190)" to="(500,270)"/>
@@ -4196,7 +4204,42 @@
       <a name="incoming" val="7"/>
       <a name="spacing" val="4"/>
     </comp>
+    <comp lib="0" loc="(110,590)" name="Splitter">
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="2"/>
+      <a name="bit4" val="3"/>
+      <a name="bit5" val="4"/>
+      <a name="bit6" val="5"/>
+      <a name="fanout" val="6"/>
+      <a name="incoming" val="7"/>
+      <a name="spacing" val="4"/>
+    </comp>
+    <comp lib="0" loc="(110,590)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="OPCODE"/>
+      <a name="width" val="7"/>
+    </comp>
     <comp lib="0" loc="(120,120)" name="Tunnel">
+      <a name="label" val="VALID"/>
+    </comp>
+    <comp lib="0" loc="(130,420)" name="Tunnel">
+      <a name="label" val="two"/>
+    </comp>
+    <comp lib="0" loc="(130,460)" name="Tunnel">
+      <a name="label" val="three"/>
+    </comp>
+    <comp lib="0" loc="(130,500)" name="Tunnel">
+      <a name="label" val="four"/>
+    </comp>
+    <comp lib="0" loc="(130,540)" name="Tunnel">
+      <a name="label" val="five"/>
+    </comp>
+    <comp lib="0" loc="(130,580)" name="Tunnel">
+      <a name="label" val="six"/>
+    </comp>
+    <comp lib="0" loc="(150,710)" name="Tunnel">
+      <a name="facing" val="north"/>
       <a name="label" val="VALID"/>
     </comp>
     <comp lib="0" loc="(190,140)" name="Tunnel">
@@ -4218,6 +4261,10 @@
     <comp lib="0" loc="(190,80)" name="Tunnel">
       <a name="label" val="OPCODE"/>
       <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(210,700)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="six"/>
     </comp>
     <comp lib="0" loc="(400,430)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -4334,6 +4381,7 @@
       <a name="label" val="J_type_JAL"/>
       <a name="type" val="output"/>
     </comp>
+    <comp lib="2" loc="(210,690)" name="Decoder"/>
     <comp lib="2" loc="(440,410)" name="Decoder">
       <a name="select" val="2"/>
     </comp>
@@ -4356,6 +4404,10 @@
     <wire from="(120,140)" to="(190,140)"/>
     <wire from="(120,180)" to="(190,180)"/>
     <wire from="(120,220)" to="(190,220)"/>
+    <wire from="(150,700)" to="(150,710)"/>
+    <wire from="(150,700)" to="(200,700)"/>
+    <wire from="(200,690)" to="(200,700)"/>
+    <wire from="(210,690)" to="(210,700)"/>
     <wire from="(400,410)" to="(400,430)"/>
     <wire from="(400,410)" to="(430,410)"/>
     <wire from="(440,410)" to="(440,470)"/>
@@ -7946,11 +7998,13 @@
     <comp lib="5" loc="(1080,230)" name="RAM">
       <a name="addrWidth" val="15"/>
       <a name="appearance" val="logisim_evolution"/>
+      <a name="asyncread" val="true"/>
       <a name="dataWidth" val="32"/>
     </comp>
     <comp lib="5" loc="(570,230)" name="RAM">
       <a name="addrWidth" val="15"/>
       <a name="appearance" val="logisim_evolution"/>
+      <a name="asyncread" val="true"/>
       <a name="dataWidth" val="32"/>
     </comp>
     <wire from="(1050,260)" to="(1060,260)"/>

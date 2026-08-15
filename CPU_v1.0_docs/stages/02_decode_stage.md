@@ -2,7 +2,7 @@
 
 **Document Version:** 1.0
 
-**Last Updated:** 2026-06-21 12:10 UTC
+**Last Updated:** 2026-06-21 12:10 IST
 
 **Implementation Status:** Implemented and Verified
 

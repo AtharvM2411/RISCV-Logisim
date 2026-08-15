@@ -1,9 +1,8 @@
-
 # ID/EX Pipeline Register
 
 **Document Version:** 1.0
 
-**Last Updated:** 2026-06-21 IST
+**Last Updated:** 2026-06-21 14:50 IST
 
 **Implementation Status:** Implemented
 
