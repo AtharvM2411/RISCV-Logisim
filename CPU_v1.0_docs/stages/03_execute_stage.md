@@ -73,7 +73,8 @@ flowchart LR
     PCCONTROL --> EXMEM
 
 ```
-
+---
+![execute_stage_top_level](../images/execute_stage_top_level.png)
 ---
 
 # 3. Inputs
@@ -101,7 +102,8 @@ flowchart LR
 | ALU_Result | 32 |
 | pc_target_address | 32 |
 | branch_taken | 1 |
-
+---
+![images/execute_stage_internal](../images/execute_stage_internal.png)
 ---
 
 # 5. Operand Selection
@@ -114,7 +116,7 @@ during instruction decode.
 ---
 
 ## 5.1 Operand A Selection
-
+![operand_A_select_mux](../images/operand_A_select_mux.png)
 The `operand_a_select_mux` selects the first ALU operand.
 
 ### Inputs
@@ -187,7 +189,7 @@ flowchart LR
 ---
 
 ## 5.2 Operand B Selection
-
+![operand_B_select_mux](../images/operand_B_select_mux.png)
 The `operand_b_select_mux` selects the second ALU operand.
 
 ### Inputs
@@ -261,7 +263,7 @@ flowchart LR
 ---
 
 # 6. ALU Control Unit
-
+![alu_control_unit](../images/alu_control_unit.png)
 The ALU control unit translates instruction metadata into an internal ALU operation code.
 
 The unit receives:
@@ -366,7 +368,7 @@ flowchart LR
 ---
 
 # 7. ALU Subsystem
-
+![alu_subsystem](../images/alu_subsystem.png)
 The ALU subsystem performs arithmetic, logical, shift, comparison and branch operations.
 
 The subsystem consists of:
@@ -433,7 +435,7 @@ flowchart LR
 ---
 
 ## 7.1 Adder Subunit
-
+![adder_subunit](../images/adder_subunit.png)
 The `adder_subunit` implements the arithmetic operations of the processor.
 
 Supported operations:
@@ -511,7 +513,7 @@ flowchart LR
 ---
 
 ## 7.2 Logic Subunit
-
+![logic_subunit](../images/logic_subunit.png)
 The `logic_subunit` performs bitwise logical operations.
 
 Supported operations:
@@ -598,7 +600,7 @@ flowchart LR
 ---
 
 ## 7.3 Shift Subunit
-
+![shift_subunit](../images/shift_subunit.png)
 The `shift_subunit` performs bit-shift operations.
 
 Supported operations:
@@ -687,7 +689,7 @@ flowchart LR
 ---
 
 ## 7.4 Compare Subunit
-
+![compare_subunit](../images/compare_subunit.png)
 The `compare_subunit` performs signed and unsigned comparisons.
 
 Supported operations:
@@ -776,7 +778,7 @@ flowchart LR
 ---
 
 ## 7.5 Branch Comparator
-
+![branch_comparator](../images/branch_comparator.png)
 The `branch_comparator` evaluates conditional branch instructions.
 
 The comparator operates only when:
@@ -956,7 +958,7 @@ flowchart LR
 ---
 
 # 8.1 PC Target Address Generator
-
+![pc_address_generator](../images/pc_address_generator.png)
 The `pc_target_address_generator` computes the destination address for branch
 and jump instructions.
 
@@ -1067,7 +1069,7 @@ flowchart LR
 
 
 # 9. PC Control Unit
-
+![pc_control_unit_top_level](../images/pc_control_unit_top_level.png)
 The `pc_control_unit` determines whether the processor continues sequential
 execution or transfers control to a new address.
 
@@ -1076,7 +1078,8 @@ The unit evaluates:
 - conditional branches
 - JAL instructions
 - JALR instructions
-
+---
+![pc_control_unit_internal](../images/pc_control_unit_internal.png)
 ---
 
 ## Inputs
