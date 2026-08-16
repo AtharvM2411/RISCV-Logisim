@@ -34,7 +34,7 @@ The implemented MEM/WB register carries:
 ---
 
 # 2. Pipeline Position
-
+![mem_wb_register_top_level](../images/mem_wb_register_top_level.png)
 The MEM/WB register is positioned directly between the Memory and Writeback
 stages.
 
@@ -84,8 +84,8 @@ Its responsibility is to:
 4. Propagate the associated control information.
 5. Carry the instruction validity state through the pipeline.
 6. Provide sequential control interfaces for reset, stall, and flush.
-
-
+---
+![mem_wb_register_internal](../images/mem_wb_register_internal.png)
 ---
 
 # 4. Input Interface

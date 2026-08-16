@@ -35,7 +35,7 @@ performing a memory transaction.
 ---
 
 # 2. Pipeline Position
-
+![mem_stage_top_level](../images/mem_stage_top_level.png)
 The processor uses a five-stage pipeline:
 
 ```text
@@ -234,7 +234,8 @@ flowchart LR
 ```
 
 The memory subsystem is independent of the instruction-memory subsystem.
-
+---
+![mem_stage_internal_data_memory_subsystem](../images/mem_stage_internal_data_memory_subsystem.png)
 ---
 
 # 7. Memory Organization
