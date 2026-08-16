@@ -93,6 +93,8 @@ Control Signals
 already prepared by Decode.
 
 ---
+![id_ex_register_top_level](../images/id_ex_register_top_level.png)
+---
 
 # 4. Pipeline Interfaces
 
@@ -169,7 +171,7 @@ Control Outputs
 ---
 
 # 6. Internal Organization
-
+![id_ex_internal](../images/id_ex_internal.png)
 The ID/EX register is organized into three logical groups.
 
 ```mermaid

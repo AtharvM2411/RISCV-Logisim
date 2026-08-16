@@ -95,7 +95,8 @@ graph LR
     IMM --> EX
     RF --> EX
 ```
-
+---
+![inst_decode_stage_top_level](../images/inst_decode_stage_top_level.png)
 ---
 
 # 4. Pipeline Interfaces
@@ -175,11 +176,12 @@ flowchart LR
     IMM --> OUT
     RF --> OUT
 ```
-
+---
+![inst_decode_internal](../images/inst_decode_internal.png)
 ---
 
 # 6. Instruction Splitter
-
+![inst_splitter](../images/inst_splitter.png)
 The Instruction Splitter extracts architectural fields from the 32-bit RV32I instruction word.
 
 Field extraction:
@@ -198,7 +200,7 @@ These fields are distributed to downstream decode components.
 ---
 
 # 7. Instruction Decoder
-
+![instruction_decoder](../images/instruction_decoder.png)
 ## Overview
 
 The Instruction Decoder classifies instructions into architectural instruction types.
@@ -289,7 +291,7 @@ These instruction-type signals are forwarded to the Main Control Unit.
 ---
 
 # 8. Main Control Unit
-
+![main_control_unit](../images/main_control_unit.png)
 ## Overview
 
 The Main Control Unit converts instruction classifications into control signals used throughout the pipeline.
@@ -373,7 +375,7 @@ Selects the source returned to the architectural register file.
 ---
 
 # 9. Immediate Generator
-
+![immediate_generator](../images/immediate_generator.png)
 ## Overview
 
 The Immediate Generator constructs all RV32I immediate formats.
@@ -472,7 +474,7 @@ flowchart LR
 ---
 
 # 10. Register File Interface
-
+![register_file_top_level](../images/register_file_top_level.png)
 The architectural register file is implemented externally to the Decode stage.
 
 The Decode stage interacts with the register file through:
@@ -498,9 +500,9 @@ Read_Data_2 ← Register[rs2]
 Detailed register file organization is documented separately in:
 
 ```text
-register_file_subsystem.md
+register_file_architecture.md
 ```
-
+![register_file_internal](../images/register_file_internal.png)
 ---
 
 # 11. Operand Preparation
