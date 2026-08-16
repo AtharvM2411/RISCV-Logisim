@@ -22,7 +22,7 @@ The register file itself is maintained as a separate architectural subsystem and
 ---
 
 ## 2. Architectural Position
-
+![writeback_stage_top_level](../images/writeback_stage_top_level.png)
 The Writeback stage follows the MEM stage and the `mem_wb_register`.
 
 ```mermaid
@@ -69,7 +69,8 @@ The Writeback stage receives the following inputs from the MEM/WB pipeline regis
 The implementation currently exposes the above result candidates to the writeback selection logic.
 
 ---
-
+![writeback_stage_top_level](../images/writeback_stage_top_level.png)
+---
 ## 4. Writeback Data Selection
 
 The central combinational element of the WB stage is the `WritebackSel` multiplexer.

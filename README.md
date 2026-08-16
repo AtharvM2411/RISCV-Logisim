@@ -79,7 +79,7 @@ The system is being built from the ground up with a strong focus on:
 ---
 
 # CPU Architecture
-
+![cpu_top_level](CPU_v1.0_docs/images/cpu_top_level.png)
 The processor follows a classic 5-stage RISC-V pipeline:
 
 ```text
