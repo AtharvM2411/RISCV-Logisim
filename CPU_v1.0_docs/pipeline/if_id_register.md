@@ -70,7 +70,8 @@ flowchart TB
     FLUSH --> IFID
     RESET --> IFID
 ```
-
+---
+![if_id_reg_top_level](../images/if_id_reg_top_level.png)
 ---
 
 # 4. Pipeline Interfaces
@@ -133,7 +134,8 @@ flowchart TB
     STALL --> REG
     FLUSH --> REG
 ```
-
+---
+![if_id_reg_internal](../images/if_id_reg_internal.png)
 ---
 
 # 6. Stored State Elements

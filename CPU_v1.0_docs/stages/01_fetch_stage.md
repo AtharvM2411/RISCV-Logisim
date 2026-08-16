@@ -75,7 +75,7 @@ flowchart LR
     PCC -->|"next_pc"| MUX
     MUX --> IF
 ```
-
+![inst_fetch_stage_top_level](../images/inst_fetch_stage_top_level.png)
 ---
 
 # 4. Pipeline Interfaces
@@ -99,10 +99,12 @@ flowchart LR
 | PC          | 32    | Current instruction byte address    |
 | Instruction | 32    | Fetched instruction                 |
 | PC_plus_4   | 32    | Sequential next instruction address |
-
 ---
 
+
 # 5. Internal Architecture
+
+![inst_fetch_stage_internel](../images/inst_fetch_stage_internel.png)
 
 ```mermaid
 ---
@@ -223,7 +225,7 @@ The generated value is used for:
 ---
 
 ## 6.4 Instruction Memory Subsystem
-
+![inst_mem](../images/inst_mem.png)
 The Instruction Memory Subsystem provides instruction fetch capability.
 
 ### Configuration
