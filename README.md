@@ -91,7 +91,7 @@ IF -> ID -> EX -> MEM -> WB
 # Pipeline Stages
 
 ## Instruction Fetch (IF)
-
+![inst_fetch_stage_top_level](CPU_v1.0_docs/images/inst_fetch_stage_top_level.png)
 Responsible for:
 
 * Program Counter management
@@ -110,7 +110,7 @@ Responsible for:
 ---
 
 ## Instruction Decode (ID)
-
+![inst_decode_stage_top_level](CPU_v1.0_docs/images/inst_decode_stage_top_level.png)
 Responsible for:
 
 * Instruction decoding
@@ -131,7 +131,7 @@ Responsible for:
 ---
 
 ## Execute (EX)
-
+![execute_stage_top_level](CPU_v1.0_docs/images/execute_stage_top_level.png)
 Responsible for:
 
 * Arithmetic operations
@@ -152,7 +152,7 @@ Responsible for:
 ---
 
 ## Memory (MEM)
-
+![mem_stage_top_level](CPU_v1.0_docs/images/mem_stage_top_level.png)
 Responsible for:
 
 * Load/store execution
@@ -171,7 +171,7 @@ Responsible for:
 ---
 
 ## Writeback (WB)
-
+![writeback_stage_top_level](CPU_v1.0_docs/images/writeback_stage_top_level.png)
 Responsible for:
 
 * Writing results back to registers
