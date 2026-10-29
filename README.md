@@ -172,6 +172,7 @@ Responsible for:
 
 ## Writeback (WB)
 ![writeback_stage_top_level](CPU_v1.0_docs/images/writeback_stage_top_level.png)
+
 Responsible for:
 
 * Writing results back to registers
